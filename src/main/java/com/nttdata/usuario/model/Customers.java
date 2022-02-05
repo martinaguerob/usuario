@@ -1,12 +1,12 @@
 package com.nttdata.usuario.model;
 
 import lombok.Data;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Data
-@Table(name = "customers")
+@Document(collation = "Customers")
 public class Customers {
 
     @Id
@@ -14,4 +14,5 @@ public class Customers {
     private String code;
     private String name;
     private String type;
+
 }
